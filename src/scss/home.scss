@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container__first-block {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    @media screen and (max-width: 768px) {
+        // height: 90vh;
+    }
+}
+
+.banner {
+    flex: 1 1 auto;
+    position: relative;
+
+    // .banner__bg
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        @media screen and (max-width: 768px) {
+            object-fit: cover;
+            object-position: center bottom;
+        }
+    }
+
+    // .banner__wrap
+    &__wrap {
+        max-width: 900px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 768px) {
+            padding: 0px 10px;
+            // height: 100%;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: center;
+        }
+    }
+
+    // .banner__strizh
+    &__strizh {
+        position: absolute;
+        top: 20px;
+        left: 0;
+
+        @media screen and (max-width: 1170px) {
+            top: 0%;
+
+            width: 180px;
+        }
+
+    }
+
+    // .banner__title
+
+    &__title {
+        margin-top: 120px;
+        // position: relative;
+        display: inline-flex;
+
+        svg {
+            width: 100%;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    // .title-banner
+    .title-banner {
+        svg {
+            display: block !important;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+
+
+    // .banner__text
+
+    &__text {
+        font-family: 'Allianz Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        color: #38538B;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+        margin-top: 10px;
+        margin-left: 20px;
+        max-width: 320px;
+
+        @media screen and (min-width: 768px) {}
+    }
+}
+
+.line-bottom {
+    border: 1px solid #38538B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+    background-color: #38538B;
+
+    &::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        width: 58%;
+        min-width: 10px;
+        height: 5px;
+        background: rgba(224, 182, 108, 0.4);
+        border-radius: 100px;
+
+        @media screen and (max-width: 1440px) {
+            width: 20%;
+        }
+
+        @media screen and (max-width: 1207px) {
+            width: 10%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: flex;
+        align-items: center;
+        width: 58%;
+        min-width: 10px;
+        height: 5px;
+        background: rgba(224, 182, 108, 0.4);
+        border-radius: 100px;
+
+        @media screen and (max-width: 1440px) {
+            width: 20%;
+        }
+
+        @media screen and (max-width: 1207px) {
+            width: 10%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    // .line-bottom__body
+
+    &__body {
+        flex: 1 1 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1024px) {
+            padding: 0px 20px;
+        }
+
+        @media screen and (max-width: 400px) {
+            padding: 0px 10px;
+        }
+    }
+
+    .line {
+        width: 100%;
+        min-width: 20px;
+        height: 5px;
+        background: rgba(224, 182, 108, 0.4);
+        border-radius: 100px;
+
+        @media screen and (max-width: 400px) {
+            min-width: 10px;
+        }
+
+    }
+
+    // .line-bottom__text
+
+    &__text {
+        font-family: 'Allianz Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 140%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #EDC989;
+        margin: 0px 8px;
+
+        @media screen and (max-width: 1545px) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 678px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 16px;
+        }
+    }
+}
